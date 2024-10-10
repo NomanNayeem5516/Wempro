@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:wempro/screens/massage.dart';
 
+import '../components/common_button.dart';
 import '../helper/string_helper.dart';
 import 'home_page.dart';
 import 'home_page_2.dart';
@@ -24,25 +25,25 @@ class _WelcomePageState extends State<WelcomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const HomePage()));
-              },
-              child: const Text(StringHelper.map),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const HomePage2()));
-              },
-              child: const Text(StringHelper.list),
-            ),
-            ElevatedButton(
-              onPressed: () {
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.push(context,
+            //         MaterialPageRoute(builder: (context) => const HomePage()));
+            //   },
+            //   child: const Text(StringHelper.map),
+            // ),
+            // const SizedBox(
+            //   height: 10,
+            // ),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.push(context,
+            //         MaterialPageRoute(builder: (context) => const HomePage2()));
+            //   },
+            //   child: const Text(StringHelper.list),
+            // ),
+            CommonButton(
+              onPress: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const Massage()));
               },

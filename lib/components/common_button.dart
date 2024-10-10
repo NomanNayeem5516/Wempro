@@ -20,7 +20,7 @@ class CommonButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             backgroundColor: ColorsHelper.blueColor),
         child: const Text(
-          StringHelper.logIn,
+          StringHelper.message,
           style: TextStyle(
               color: ColorsHelper.whiteColor,
               fontSize: FontHelper.dimensn_20),
