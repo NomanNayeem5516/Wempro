@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wempro/helper/font_helper.dart';
-import '../bloc/info_bloc.dart';
-import '../bloc/info_event.dart';
-import '../bloc/info_state.dart';
+import '../bloc/firstBloc/info_bloc.dart';
+import '../bloc/firstBloc/info_event.dart';
+import '../bloc/firstBloc/info_state.dart';
 import '../helper/colors_helper.dart';
 import '../networkManager/repository.dart';
 import '../helper/string_helper.dart';

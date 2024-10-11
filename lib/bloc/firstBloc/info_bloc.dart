@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../networkManager/repository.dart';
+
+import '../../networkManager/repository.dart';
 import 'info_event.dart';
 import 'info_state.dart';
 

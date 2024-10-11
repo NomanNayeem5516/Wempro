@@ -1,6 +1,7 @@
 import '../models/message.dart';
 import '../models/responseMap.dart';
 import '../models/response_list.dart';
+import '../models/secandModel.dart';
 import 'dio_helper.dart';
 
 class Repository {
@@ -24,5 +25,14 @@ class Repository {
       url: 'http://team.dev.helpabode.com:54292/api/wempro/flutter-dev/coding-test-2024/',
     );
     return info.fromJson(response);
+  }
+
+
+
+  Future<secantModel> fetchSecand() async {
+    Map<String, dynamic> response = await _dioHelper.get(
+      url: 'http://team.dev.helpabode.com:54292/api/wempro/flutter-dev/coding-test-2024/',
+    );
+    return secantModel.fromJson(response);
   }
 }

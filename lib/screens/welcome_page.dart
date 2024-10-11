@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:wempro/screens/massage.dart';
+import 'package:wempro/screens/secound_screen.dart';
 
 import '../components/common_button.dart';
 import '../helper/string_helper.dart';
@@ -35,13 +36,13 @@ class _WelcomePageState extends State<WelcomePage> {
             // const SizedBox(
             //   height: 10,
             // ),
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.push(context,
-            //         MaterialPageRoute(builder: (context) => const HomePage2()));
-            //   },
-            //   child: const Text(StringHelper.list),
-            // ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const SecoundScreen()));
+              },
+              child: const Text(StringHelper.second),
+            ),
             CommonButton(
               onPress: () {
                 Navigator.push(context,

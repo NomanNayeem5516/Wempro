@@ -13,4 +13,5 @@ class StringHelper{
   static const String list='List';
   static const String getMapList='Get API with Map & List';
   static const String message='Message';
+  static const String second='Second Assignment';
 }
