@@ -17,7 +17,7 @@ class _SecoundScreenState extends State<SecoundScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<SecandBloc>(
-      create: (context) => SecandBloc(Repository())..add(FetchSecand()), // Trigger the event to fetch data
+      create: (context) => SecandBloc(Repository())..add(FetchSecand()),
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Secand Screen'),
@@ -25,9 +25,9 @@ class _SecoundScreenState extends State<SecoundScreen> {
         body: BlocBuilder<SecandBloc, SecandState>(
           builder: (context, state) {
             if (state is SecandLoading) {
-              return const Center(child: CircularProgressIndicator()); // Show loading indicator
+              return const Center(child: CircularProgressIndicator());
             } else if (state is SecandLoaded) {
-              final secantData = state.message; // Access the fetched data
+              final secantData = state.message;
               return Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
@@ -47,7 +47,7 @@ class _SecoundScreenState extends State<SecoundScreen> {
                       'Information: ${secantData.information ?? "No information"}',
                       style: const TextStyle(fontSize: 16),
                     ),
-                    // Display jsonResponse data if needed
+
                     if (secantData.jsonResponse != null) ...[
                       const SizedBox(height: 20),
                       const Text('Attributes:', style: TextStyle(fontSize: 20)),

@@ -18,20 +18,22 @@ class Repository {
     List<dynamic> response = await _dioHelper.get(
       url: 'https://jsonplaceholder.typicode.com/posts',
     );
-    return List<ResponseList>.from(response.map((e)=>ResponseList.fromJson(e)));
+    return List<ResponseList>.from(
+        response.map((e) => ResponseList.fromJson(e)));
   }
+
   Future<info> responseInfo() async {
     Map<String, dynamic> response = await _dioHelper.get(
-      url: 'http://team.dev.helpabode.com:54292/api/wempro/flutter-dev/coding-test-2024/',
+      url:
+          'http://team.dev.helpabode.com:54292/api/wempro/flutter-dev/coding-test-2024/',
     );
     return info.fromJson(response);
   }
 
-
-
   Future<secantModel> fetchSecand() async {
     Map<String, dynamic> response = await _dioHelper.get(
-      url: 'http://team.dev.helpabode.com:54292/api/wempro/flutter-dev/coding-test-2024/',
+      url:
+          'http://team.dev.helpabode.com:54292/api/wempro/flutter-dev/coding-test-2024/',
     );
     return secantModel.fromJson(response);
   }
