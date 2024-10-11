@@ -17,7 +17,6 @@ class SecoundScreen extends StatefulWidget {
 }
 
 class _SecoundScreenState extends State<SecoundScreen> {
-  // Store selected values for each attribute
   Map<String, dynamic> selectedValues = {};
 
   @override
@@ -88,7 +87,7 @@ class _SecoundScreenState extends State<SecoundScreen> {
                                       ),
                                     ),
                                     const SizedBox(height: 4),
-                                    _buildInputField(attribute),
+                                    buildInputField(attribute),
                                   ],
                                 ),
                               ),
@@ -116,23 +115,22 @@ class _SecoundScreenState extends State<SecoundScreen> {
     );
   }
 
-  Widget _buildInputField(Attributes attribute) {
+  Widget buildInputField(Attributes attribute) {
     switch (attribute.type) {
       case 'radio':
-        return _buildRadioButtons(
-            attribute.options, attribute.title.toString());
+        return buildRadioButtons(attribute.options, attribute.title.toString());
       case 'dropdown':
-        return _buildDropdown(attribute.options, attribute.title.toString());
+        return buildDropdown(attribute.options, attribute.title.toString());
       case 'checkbox':
-        return _buildCheckbox(attribute.options, attribute.title.toString());
+        return buildCheckbox(attribute.options, attribute.title.toString());
       case 'textfield':
-        return _buildTextField(attribute.title.toString());
+        return buildTextField(attribute.title.toString());
       default:
         return const Text('Unknown type');
     }
   }
 
-  Widget _buildRadioButtons(List<String>? options, String title) {
+  Widget buildRadioButtons(List<String>? options, String title) {
     String? selectedValue = selectedValues[title];
     return Column(
       children: options?.map((option) {
@@ -151,7 +149,7 @@ class _SecoundScreenState extends State<SecoundScreen> {
     );
   }
 
-  Widget _buildDropdown(List<String>? options, String title) {
+  Widget buildDropdown(List<String>? options, String title) {
     String? selectedValue = selectedValues[title];
     return DropdownButton<String>(
       value: selectedValue,
@@ -170,7 +168,7 @@ class _SecoundScreenState extends State<SecoundScreen> {
     );
   }
 
-  Widget _buildCheckbox(List<String>? options, String title) {
+  Widget buildCheckbox(List<String>? options, String title) {
     Map<String, bool> selectedOptions = selectedValues[title] ?? {};
     return Column(
       children: options?.map((option) {
@@ -189,7 +187,7 @@ class _SecoundScreenState extends State<SecoundScreen> {
     );
   }
 
-  Widget _buildTextField(String title) {
+  Widget buildTextField(String title) {
     String textValue = selectedValues[title] ?? '';
     return TextField(
       onChanged: (value) {
